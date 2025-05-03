@@ -1,16 +1,16 @@
 #include <bits/stdc++.h>
 using namespace std;
 
-int sum (int n) {
+int factorial(int n) {
     if( n < 1) {
-        return 0;
+        return 1;
     }
-    return n + sum(n - 1);
+    return n * factorial(n - 1);
 }
 
 int main() {
     int n;
     cout << "Enter a number: ";
     cin >> n;
-    cout << sum(n) << endl;
+    cout << factorial(n) << endl;
 }
