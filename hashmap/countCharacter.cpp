@@ -13,12 +13,12 @@ int main() {
     cin >> s;
 
     // pre-calculate here
-    int hash[26] = {0};
+    int hash[256] = {0};
     for(int i = 0; i < s.size(); i++) {
         // abb -> a - 'a' -> 97 - 97 = 0 => hash[0]++ => a:1
         // abb => b - 'a' => 98 - 97 = 1 => hash[1]++ => b: 2
         // abb => b - 'a' => 98 - 97 = 1 => hash[1]++ => b: 2
-        hash[s[i] - 'a']++;
+        hash[s[i]]++;
     }
     int q;
     cin >> q;
@@ -29,7 +29,7 @@ int main() {
         // fetch here
         // a => hash[97 - 97] => hash[0] => 1
         // b => hash[98 - 97] => hash[1] => 2
-        cout << hash[ch - 'a'];
+        cout << hash[ch];
     }
 
     return 0;   
