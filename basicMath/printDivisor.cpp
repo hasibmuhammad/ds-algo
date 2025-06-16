@@ -12,7 +12,6 @@ void printDiv(int n) {
                 list.push_back(n/i);
             }
         }
-        
     }
     sort(list.begin(), list.end());
     for(auto it : list) {
