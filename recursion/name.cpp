@@ -1,13 +1,11 @@
 #include <bits/stdc++.h>
 using namespace std;
-int cnt = 0;
-void printName() {
-    if(cnt == 5) {
+void printName(int n) {
+    if(n == 0) {
         return;
     }
     cout << "Hasib" << endl;
-    cnt++;
-    printName();
+    printName(n - 1);
 }
 
 void print1ToN(int start, int n) {
@@ -27,8 +25,8 @@ void printNto1(int n) {
 }
 
 int main() {
-    // printName();
+    printName(5);
     // print1ToN(1, 10);
-    printNto1(10);
+    // printNto1(10);
     return 0;
 }
